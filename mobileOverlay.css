@@ -1,0 +1,20 @@
+/* Mobile View Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    z-index: 9999;
+    padding-top: 20%;
+}
+
+/* Show overlay when screen is not mobile */
+.overlay.show {
+    display: block;
+}
