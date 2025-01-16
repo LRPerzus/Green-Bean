@@ -57,12 +57,11 @@ body {
 }
 
 #loadingPage .beanLoading .loadingBeans {
-    width: 30px;
-    margin-right: 10px;
+    width: 20px;
+    margin-right: 20px;
 }
 
 #loadingPage .beanLoading .loadingBeans.last {
-    width: 30px;
     margin-right: 0px;
 }
 
@@ -90,3 +89,22 @@ body {
 .pop-in {
     animation: popIn 0.3s forwards cubic-bezier(0.3, 1.5, 0.5, 1);
 }
+
+.first
+{
+    rotate: 235deg;
+}
+
+.second
+{
+    rotate: 45deg;
+}
+.third
+{
+    rotate:90deg;
+}
+.fourth
+{
+    rotate: 155deg;
+}
+
