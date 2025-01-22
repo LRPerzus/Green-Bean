@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Green Bean</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobileOverlay.css">
     <link rel="stylesheet" href="loadingPage.css">
 
@@ -41,35 +43,44 @@
                 <img src="topBean.svg">
             </div>
         </div>
-        <div class="loginOptions">
-            <a href="#" class="social-button google-button">
+        <div class="loginOptions" id="logionOptions">
+            <a href="mainPage.html" class="social-button google-button" onclick="goToMainPage()">
                 <img src="google.webp" alt="Google" class="social-icon">
                 Sign in with Google
               </a>
             
-              <a href="#" class="social-button facebook-button">
+              <a href="mainPage.html" class="social-button facebook-button" onclick="goToMainPage()">
                 <img src="facbook.png" alt="Facebook" class="social-icon">
                 Login with Facebook
               </a>
             
-              <a href="#" class="social-button twitter-button">
+              <a href="mainPage.html" class="social-button twitter-button" onclick="goToMainPage()">
                 <img src="twitter.svg" alt="Twitter" class="social-icon">
                 Sign in with Twitter
               </a>
             
-              <a href="#" class="social-button linkedin-button">
+              <a href="mainPage.html" class="social-button linkedin-button" onclick="goToMainPage()">
                 <img src="linkedin.svg" alt="LinkedIn" class="social-icon">
                 Sign in with LinkedIn
               </a>
+              <span id="haveAccount"> Already have an account? <a  onclick="goToLogin()">Log in</a></span>
         </div>
-    </div>
+
+        <div class="manualLogin hidden" id="manualLogin">
+            <div>UserName</div>
+            <input type="text" id="loginUser" aria-label="Username">
+            <div>Password</div>
+            <input type="password" id="loginPass">
+            <div class="loginButton">
+                <button onclick="goToMainPage()">LOGIN</button>
+            </div>
+        </div>
 
 
-    <div id="mainPage">
-        
     </div>
 
     <script src="mobileView.js"></script>
     <script src="beanPopIn.js"></script>
+    <script src="goToLogin.js"></script>
 </body>
 </html>

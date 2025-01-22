@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Tan-Headline';
+    src: url('TAN-Headline/TAN-Headline/TANHEADLINE-Regular.ttf') format('truetype'); /* Adjust the path to your font */
+}
+
+body {
+    font-family: 'Tan-Headline', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff4e2;
+    margin: 0;
+}
+
+#mainPage
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+#topBar
+{
+    width: 100%;
+    height: 20%;
+    background-color: #A5B68D;
+    display: flex;
+    flex-direction: row;
+
+
+    .userImage 
+    {
+        width: 40%;
+        img{
+            height: 100px;
+            max-width: 100px;
+        }
+    }
+    .userText 
+    {
+        width: 60%;
+    }
+}
+

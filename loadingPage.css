@@ -7,6 +7,13 @@ body {
     font-family: 'Tan-Headline', sans-serif;
     width: 100vw;
     height: 100vh;
+    background-color: #fff4e2;
+    margin: 0;
+}
+
+.hidden
+{
+    display: none !important;
 }
 
 #loadingPage
@@ -18,7 +25,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0px;
-    background-color: #fff4e2;
 }
 
 #loadingPage .title
@@ -38,6 +44,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #5b8235;
+    text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.3);
 }
 #loadingPage .img {
     display: flex;
@@ -113,8 +120,16 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Archivo', sans-serif;
     width: 60%;
+}
+
+.loginOptions #haveAccount a
+{
+    font-size: 17px;
+    text-decoration: underline; 
+    cursor: pointer;
+    color: #1b76f2;
 }
 
 
@@ -136,25 +151,70 @@ body {
     width: 20px;
 }
 
-  .google-button {
+.google-button {
     background-color: #ffff;
     color: black;
-  }
+}
 
-  .facebook-button {
+.facebook-button {
     background-color: #1b76f2;
-  }
+}
 
-  .twitter-button {
+.twitter-button {
     background-color: #1DA1F2;
-  }
+}
 
-  .linkedin-button {
+.linkedin-button {
     background-color: #0077B5;
-  }
+}
 
-  .social-icon {
+.social-icon {
     margin-right: 5px;
-  }
+}
+
+.manualLogin
+{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Tan-Headline', sans-serif;
+}
+
+.manualLogin div
+{
+    color: #B99470;
+    font-size: 15px;
+}
+
+.manualLogin input
+{
+    border:3px solid #A5B68D;
+    width: 273px;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+}
+
+.manualLogin .loginButton 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manualLogin button
+{
+    font-family: "Bagel Fat One", serif;
+    width: 176px;
+    height: 30px;
+    border:3px solid transparent;
+    border-radius: 10px;
+    background-color: #A5B68D;
+    color: #FFF4E2;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
 
