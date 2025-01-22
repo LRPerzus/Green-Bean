@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="mobileOverlay.css">
     <link rel="stylesheet" href="mainPage.css">
 
+    <script>
+        // Function to get query parameters from the URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    
+        // Retrieve the username from the URL
+        const userName = getQueryParam('username');
+        const calanderEvent = {
+            date : "2025-01-03" ,
+            eventName: "Climbing the Stalk by GreanBean"
+        }
+    
+        // Store the username in the userData object
+        let userData = {
+            userName: userName,
+            calanderEvent: [calanderEvent],
+            totalBeans: 32,
+            ranking: 1
+        };
+
+    </script>
+
 
 </head>
 <body>
@@ -21,12 +45,12 @@
 
     <div class="mainPage">
         <div id="topBar">
-            <div class="userImage">
+            <div class="userImage hidden">
                 <div class="imageFromUser">
                     <img src="./assets/userIconOverlay.png">
                 </div>
             </div>
-            <div class="userText">
+            <div class="userText hidden ">
                 <div class="userNameContainers">
                     <span class="username">
                         Username 
@@ -36,6 +60,11 @@
                     </svg>
                 </div>
                 <span class="userTitle">The Bean Baron</span>
+            </div>
+            <div id="returnArrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="38" viewBox="0 0 55 38" fill="none">
+                    <path d="M1.23223 17.2322C0.255924 18.2085 0.255924 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM55 16.5L3 16.5V21.5L55 21.5V16.5Z" fill="#333333"/>
+                </svg>
             </div>
         </div>
         
@@ -94,8 +123,10 @@
             </div>
         </div>
 
-        <div class="mainContent" id="Map">
-            
+        <div class="mainContent hidden" id="Map">
+            <div class="closestLocation">
+
+            </div>
         </div>
 
         <div id="controlBar">
@@ -103,7 +134,7 @@
                 <div class="greenOption">
                     <img class="calander" src="./assets/calander.png">
                 </div>
-                <div class="greenOption">
+                <div class="greenOption" onclick="mapClick()">
                     <img src="./assets/map.png">
                 </div>
                 <div class="greenOption center">
@@ -121,5 +152,8 @@
     </div>
 
     <script src="mobileView.js"></script>
+    <script src="loadingUserData.js"></script>
+    <script src="map.js"></script>
+
 </body>
 </html>
