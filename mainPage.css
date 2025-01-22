@@ -187,6 +187,14 @@ body {
     margin-bottom: 10px;
 }
 
+.rankingMore .container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
 .rankingMore span
 {
     display: flex;
@@ -259,6 +267,7 @@ body {
             align-items: center;
             padding-left: 30px;
             border-left: 1px solid black;
+            cursor: pointer;
         }
         
         span
