@@ -56,7 +56,7 @@ else
 }
 
 // Now we are going to set those which have cursor on the HomePage that if they are clickable to run this function of removing
-function addClickListenerToPointerElements(containerElement) {
+function addClickListenerToPointerElements(containerElement,isControlBar) {
     const allElements = containerElement.querySelectorAll('*');
   
     const elementsWithPointerCursor = Array.from(allElements).filter(element => {
@@ -78,16 +78,20 @@ function addClickListenerToPointerElements(containerElement) {
         if (returnArrow) returnArrow.classList.remove("hidden");
   
         // Hide the "#controlBar" element
-        const controlBar = document.querySelector("#controlBar");
-        if (controlBar) controlBar.classList.add("hidden");
+        if (!isControlBar)
+        {
+            const controlBar = document.querySelector("#controlBar");
+            if (controlBar) controlBar.classList.add("hidden");
+        }
+       
       });
     });
 }
 
 const homePageElement = document.getElementById("Homepage");
-addClickListenerToPointerElements(homePageElement);
+addClickListenerToPointerElements(homePageElement,false);
 const controlPannel = document.getElementById("controlBar");
-addClickListenerToPointerElements(controlPannel);
+addClickListenerToPointerElements(controlPannel,true);
 
 // Functionality of back button
 const backButton = document.getElementById("returnArrow");
@@ -121,6 +125,14 @@ backButton.addEventListener("click", () =>{
     if (controlBar) controlBar.classList.remove("hidden");
 
 })
+
+controlPannel.querySelectorAll(".greenOption").forEach(controlOptions => {
+    controlOptions.addEventListener("click", function() {
+        const currentlyActive = document.querySelector(".active");
+        if (currentlyActive) currentlyActive.classList.remove("active");
+        this.classList.add("active");  // `this` refers to the clicked element
+    });
+});
 
   
 
