@@ -219,6 +219,7 @@ body {
             flex-direction: row;
             justify-content: space-around;
             span {
+                font-family: 'Bungee', sans-serif;
                 font-size: 40px;
             }
             div{
