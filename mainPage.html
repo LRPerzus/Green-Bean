@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Green Bean</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobileOverlay.css">
     <link rel="stylesheet" href="mainPage.css">
@@ -39,14 +39,44 @@
             </div>
         </div>
         <div id="mainContent">
-            <div id="Rankings">
-                <div class="row">
+            <div id="Rankings" class="brownContainer">
+                <div class="row rankingInfo">
                     <div class="contributors">
+                        <span class="title"> Top Contributions </span>
+                        <ol>
+                            <li>Ride Green With Anywheel</li>
+                            <li>Weigh Your Trash</li>
+                            <li>Green Your Routine</li>
+                          </ol>
                         
                     </div>
-                    <div class="userRanking"></div>
+                    <div class="userRanking">
+                        <span class="title"> Ranking </span>
+                        <span class="rank"> #0 </span>
+                    </div>
                 </div>
-                <div class="row"></div>
+                <div class="row rankingMore">
+                    <span> See local rankings </span>
+                    <img class="arrow" src="arrowIcon.svg">
+                </div>
+            </div>
+
+            <div id="totalBeans" class="brownContainer">
+                <div class="totalAmount">
+                    <span class="title"> You have</span>
+                    <div class="noOfBeans">
+                        <span>0</span>
+                        <div>
+                            <img class="bean"src="topBean.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="redeemVoucher">
+                    <div class="container">
+                        <span> Redeem Vouchers</span>
+                        <img src="arrowIcon.svg">
+                    </div>
+                </div>
             </div>
         </div>
         <div id="controlBar"></div>

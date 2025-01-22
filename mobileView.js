@@ -1,8 +1,8 @@
 function checkMobileView() {
     const overlay = document.getElementById("mobile-overlay");
     
-    // If window width is greater than 768px (not mobile)
-    if (window.innerWidth > 768) {
+    // If window width is greater than 480px (not mobile)
+    if (window.innerWidth > 480) {
         overlay.classList.add("show");  // Show overlay
     } else {
         overlay.classList.remove("show");  // Hide overlay
