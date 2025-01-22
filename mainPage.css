@@ -260,3 +260,121 @@ body {
     }
 
 }
+
+
+#upcomingEvents
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title
+    {
+        margin-top: 5px;
+        color:#fff4e2;
+        font-size: 25px;
+    }
+    
+    .eventDetails
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .upcomingDate
+    {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 20px;
+        margin-left: 30px;
+
+        border-right: 1px solid black;
+    }
+   
+    .eventName
+    {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 23px;
+        margin-left: 10px;
+
+       
+    }
+
+}
+
+
+#controlBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #B99470;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 36px 36px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    justify-content: center; /* Ensures items are centered */
+    align-items: flex-end; /* Aligns to the bottom */
+}
+
+.greenOption {
+    position: relative;
+    width: 60px;
+    height: 140px;
+    background-color: #A5B68D;
+    margin: 0 10px;
+    border: 1px solid black;
+    transform: translateY(30px);
+    border-radius: 20px;
+
+    img
+    {
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    img.calander
+    {
+        margin-top: 15px;
+    }
+}
+
+.greenOption.center {
+    width: 100px;
+    margin: 0 auto; /* Centers it inside .container */
+    img
+    {
+        width: 80px;
+    }
+
+}
+
+.greenOption.last {
+    margin-right: 0;
+}
+
+.greenOption.active
+{
+    height: 160px;
+}
