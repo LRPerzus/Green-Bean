@@ -21,24 +21,31 @@
         // Retrieve the username from the URL
         const userName = getQueryParam('username');
         const calanderEventHistoryMonth = {
-            date : "2025-01-03" ,
-            eventName: "Climbing the Stalk by GreanBean"
-        }
-
-        const upComingEvent = {
-            date : "2025-01-03" ,
+            date: "2025-01-03",
             eventName: "Climbing the Stalk by GreanBean"
         }
     
-        // Store the username in the userData object
-        let userData = {
-            userName: userName,
-            calanderEvent: [calanderEventHistoryMonth],
-            upComingEvent: upComingEvent,
-            totalBeans: 32,
-            ranking: 1
-        };
+        const upComingEvent = {
+            date: "2025-01-03",
+            eventName: "Climbing the Stalk by GreanBean"
+        }
+        let userData;
 
+        // Check if "GreanBeanUserData" is stored in localStorage
+        if (!localStorage.getItem('GreanBeanUserData')) {
+            // If not, store a new userData object in localStorage
+            userData = {
+                username: userName,
+                calanderEvent: [calanderEventHistoryMonth],
+                upComingEvent: upComingEvent,
+                totalBeans: 32,
+                ranking: 1
+            };
+        } else {
+            // Optionally, you could load the existing data from localStorage if needed
+            let storedData = JSON.parse(localStorage.getItem('GreanBeanUserData'));
+            console.log(storedData);  // This will log the existing user data from localStorage
+        }
     </script>
 
 

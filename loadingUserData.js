@@ -35,7 +35,7 @@ if (userData.username !== "")
 
     // Updating the general options
     const usernameElement = document.querySelector(".username");
-    usernameElement.textContent = userData.userName;
+    usernameElement.textContent = userData.username;
 
     const rankElement = document.querySelector(".rank");
     rankElement.textContent = "#" + userData.ranking;
@@ -167,6 +167,8 @@ redeemVoucherElement.addEventListener("click", () => {
     const beanRedemption = document.getElementById("beanRedemption");
     beanRedemption.classList.remove("hidden")
 
+    beanRedemption.querySelector(".noOfBeans span").textContent = userData.totalBeans;
+
 })
 
 
@@ -177,6 +179,9 @@ seemoreRankingElement.addEventListener("click",() => {
 
     const rankings = document.getElementById("rankings");
     rankings.classList.remove("hidden");
+
+    // Update the rankingNumbers
+    rankings.querySelector(".currentRanking").textContent = "#"+userData.ranking
 })
 
 
