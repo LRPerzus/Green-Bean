@@ -192,4 +192,6 @@ function showDayDetails(day) {
 }
 
 
-document.addEventListener("DOMContentLoaded", populateCalendar);
+window.onload = function() {
+    populateCalendar();
+};
