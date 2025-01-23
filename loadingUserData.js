@@ -145,6 +145,15 @@ redeemVoucherElement.addEventListener("click", () => {
 
 })
 
+
+// Click function for see local rankings
+const seemoreRankingElement = homePageElement.querySelector(".rankingMore .container");
+seemoreRankingElement.addEventListener("click",() => {
+    homePageElement.classList.add("hidden");
+
+    const rankings = document.getElementById("rankings");
+    rankings.classList.remove("hidden");
+})
   
 
 
