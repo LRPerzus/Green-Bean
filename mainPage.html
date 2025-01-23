@@ -20,7 +20,12 @@
     
         // Retrieve the username from the URL
         const userName = getQueryParam('username');
-        const calanderEvent = {
+        const calanderEventHistoryMonth = {
+            date : "2025-01-03" ,
+            eventName: "Climbing the Stalk by GreanBean"
+        }
+
+        const upComingEvent = {
             date : "2025-01-03" ,
             eventName: "Climbing the Stalk by GreanBean"
         }
@@ -28,7 +33,8 @@
         // Store the username in the userData object
         let userData = {
             userName: userName,
-            calanderEvent: [calanderEvent],
+            calanderEvent: [calanderEventHistoryMonth],
+            upComingEvent: upComingEvent,
             totalBeans: 32,
             ranking: 1
         };
@@ -331,23 +337,44 @@
             </div>
         </div>
 
+        <div class="mainContent still-devleopment hidden" id="Scanner">
+            <div>
+                <span> SORRY THIS Feature IS not Implemented Yet </span>
+                <span> o(TヘTo)	</span>
+            </div>
+        </div>
+
+        <div class="mainContent still-devleopment hidden" id="Friends">
+            <div>
+                <span> SORRY THIS Feature IS not Implemented Yet </span>
+                <span> o(TヘTo)	</span>
+            </div>
+        </div>
+
+        <div class="mainContent still-devleopment hidden" id="Settings">
+            <div>
+                <span> SORRY THIS Feature IS not Implemented Yet </span>
+                <span> o(TヘTo)	</span>
+            </div>
+        </div>
+
 
         <div id="controlBar">
             <div class="container">
-                <div class="greenOption">
+                <div class="greenOption" id="seeCalander">
                     <img class="calander" src="./assets/calander.png">
                 </div>
                 <div class="greenOption" onclick="mapClick()">
                     <img src="./assets/map.png">
                 </div>
-                <div class="greenOption center">
+                <div class="greenOption center" id="getScanner">
                     <img src="./assets/Scanning.png">
                 </div>
-                <div class="greenOption">
+                <div class="greenOption" id="seeFriends">
                     <img src="./assets/friends.png">
 
                 </div>
-                <div class="greenOption last">
+                <div class="greenOption last" id="seeSettings">
                     <img src="./assets/settings.png">
                 </div>
             </div>

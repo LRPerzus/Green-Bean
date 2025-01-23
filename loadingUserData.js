@@ -44,10 +44,10 @@ if (userData.username !== "")
     totalBeans.textContent = userData.totalBeans;
 
     const dateElement = document.querySelector(".upcomingDate");
-    dateElement.textContent = formatDate(userData.calanderEvent[0].date)
+    dateElement.textContent = formatDate(userData.upComingEvent.date)
 
     const upcomingEvent = document.querySelector(".eventName");
-    upcomingEvent.textContent = userData.calanderEvent[0].eventName;
+    upcomingEvent.textContent = userData.upComingEvent.eventName;
 
 }
 else
@@ -76,12 +76,31 @@ function addClickListenerToPointerElements(containerElement,isControlBar) {
         // Show the "#returnArrow" element
         const returnArrow = document.querySelector("#returnArrow");
         if (returnArrow) returnArrow.classList.remove("hidden");
-  
+        const controlBar = document.querySelector("#controlBar");
+
         // Hide the "#controlBar" element
         if (!isControlBar)
         {
-            const controlBar = document.querySelector("#controlBar");
             if (controlBar) controlBar.classList.add("hidden");
+        }
+
+        if(isControlBar)
+        {
+            const currentActivePannel = controlBar.querySelector(".active");
+            currentActivePannel.classList.remove("active");if (currentActivePannel) {
+                currentActivePannel.classList.remove("active");
+            }
+    
+            // Assuming targetElement refers to the clicked panel, add 'active' to it
+            element.classList.add("active");
+
+            // Hide all mainContents
+            const allMainContents = document.querySelectorAll(".mainContent");
+            allMainContents.forEach(element => {
+                element.classList.add("hidden");
+            });
+
+            
         }
        
       });
@@ -120,9 +139,14 @@ backButton.addEventListener("click", () =>{
     const returnArrow = document.querySelector("#returnArrow");
     if (returnArrow) returnArrow.classList.add("hidden");
 
-    // Hide the "#controlBar" element
+    // unhide the "#controlBar" element
     const controlBar = document.querySelector("#controlBar");
     if (controlBar) controlBar.classList.remove("hidden");
+
+    // Also remove Actice
+    const controlActive = controlBar.querySelector(".active");
+    if (controlActive) controlActive.classList.remove("active");
+
 
 })
 
@@ -156,7 +180,7 @@ seemoreRankingElement.addEventListener("click",() => {
 })
 
 
-const upComingEventsElement = document.getElementById("upcomingEvents");
+const upComingEventsElement = homePageElement.querySelector("#upcomingEvents");
 upComingEventsElement.addEventListener("click",() => {
     homePageElement.classList.add("hidden");
 
@@ -164,6 +188,33 @@ upComingEventsElement.addEventListener("click",() => {
     seeEvents.classList.remove("hidden");
 })
 
+// Click function for scanner
+const scannerElement = controlPannel.querySelector("#getScanner");
+scannerElement.addEventListener("click",() => {
+    homePageElement.classList.add("hidden");
+
+    const scanner = document.getElementById("Scanner");
+    scanner.classList.remove("hidden");
+})
+
+
+// Click function for Friends
+const seeFriendElement = controlPannel.querySelector("#seeFriends");
+seeFriendElement.addEventListener("click",() => {
+    homePageElement.classList.add("hidden");
+
+    const friend = document.getElementById("Friends");
+    friend.classList.remove("hidden");
+})
+
+// Click Function for settings
+const seeSettingsElement = controlPannel.querySelector("#seeSettings");
+seeSettingsElement.addEventListener("click",() => {
+    homePageElement.classList.add("hidden");
+
+    const settings = document.getElementById("Settings");
+    settings.classList.remove("hidden");
+})
 
   
 
