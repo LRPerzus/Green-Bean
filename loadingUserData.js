@@ -134,6 +134,17 @@ controlPannel.querySelectorAll(".greenOption").forEach(controlOptions => {
     });
 });
 
+// Click function for redeemVoucher
+const redeemVoucherElement = homePageElement.querySelector(".redeemVoucher .container");
+redeemVoucherElement.addEventListener("click", () => {
+    const homePage = document.getElementById("Homepage")
+    homePage.classList.add("hidden")
+
+    const beanRedemption = document.getElementById("beanRedemption");
+    beanRedemption.classList.remove("hidden")
+
+})
+
   
 
 

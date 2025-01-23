@@ -110,6 +110,7 @@ body {
         height: 90px;
         display: flex;
         align-items: center;
+        cursor: pointer;
         svg
         {
             margin-left: 20px;
@@ -241,7 +242,6 @@ body {
             justify-content: space-around;
             span {
                 font-family: 'Bungee', sans-serif;
-
                 font-size: 40px;
             }
             div{
@@ -402,6 +402,154 @@ body {
 .greenOption.active
 {
     height: 160px;
+}
+
+#beanRedemption
+{
+    .contentOfPage
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .noOfBeans
+        {
+            display: flex;
+            flex-direction: row;
+
+            span{
+                font-family: 'Bungee', sans-serif;
+                font-size: 40px;
+            }
+
+            div{
+                width: 40px;
+                margin-left: 10px;
+            }
+
+            img{
+                width: inherit;
+                rotate: 45deg;
+            }
+        }
+
+        .advertisment
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid black;
+
+            .text
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #A5B68D;
+                width: 100%;
+            }
+
+            span{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            svg
+            {
+                margin-left:5px;
+                width: 40px;
+                rotate: 180deg;
+            }
+        }
+
+        .redeemSection
+        {
+            width: 100%;
+        }
+
+        .title
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            font-family: 'Black Han Sans', sans-serif;     
+            margin-bottom: 10px;   
+        }
+
+        .slideshow-container {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            overflow: hidden; /* Hide extra slides */
+            width: 100%; /* This should match one slide’s width */
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%; /* Fit exactly all slides */
+        }
+        
+        .slide {
+            display: flex;
+            flex-direction: column;
+            width: 35%; /* Each slide should take full width of .slideshow-container */
+            height: 166px;
+            
+            .content{
+                margin: 10px;
+                height: 100%;
+                background-color: white;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            flex-shrink: 0; /* Prevent slides from shrinking */
+            img{
+                max-width: 80%;
+                height: 50%;
+                border-radius: 10px;
+            }
+
+            .textContent{
+                display: flex;
+                flex-direction: column;
+                font-family: 'Bungee', sans-serif;
+                width: 100%;
+                margin-left: 20px;
+            }
+
+            .un
+            {
+                color: #FF5757;
+            }
+        }
+
+        .prev, .next {
+            width: 10%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10; /* Ensure buttons are above slides */
+        }
+        
+        .prev { left: 0; }
+        .next { right: 0; }
+    }
 }
 
 #Map

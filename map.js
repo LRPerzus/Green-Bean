@@ -5,19 +5,21 @@ function mapClick() {
     const mapElement = document.getElementById("Map");
     mapElement.classList.remove("hidden");
 
-    // Fetch the API key from apikey.txt
-    fetch('apikey.txt')
-        .then(response => response.text())
-        .then(apiKey => {
-            // Dynamically load the Google Maps API script
-            const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey.trim()}&callback=initMap`;
-            script.async = true;
-            script.defer = true;
-            document.head.appendChild(script);
-        })
-        .catch(error => console.error("Error loading API key:", error));
+    // Prompt the user to enter the API key
+    const apiKey = prompt("Please enter your Google Maps API key:");
+
+    if (apiKey && apiKey.trim() !== "") {
+        // Dynamically load the Google Maps API script with the provided API key
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey.trim()}&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+    } else {
+        alert("API key is required to load the map.");
+    }
 }
+
 
 function initMap() {
     const npLocation = { lat: 1.3321, lng: 103.7741 };

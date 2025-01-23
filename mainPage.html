@@ -7,6 +7,7 @@
     <title>Green Bean</title>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobileOverlay.css">
     <link rel="stylesheet" href="mainPage.css">
 
@@ -125,6 +126,131 @@
             </div>
         </div>
 
+        <!-- This is starting for HOMEPAGE -->
+        <div class="mainContent hidden" id="beanRedemption">
+            <div class="titleOfPage">
+                <span class="mainTitle">Bean Balance</span>
+            </div>
+            <div class="contentOfPage">
+                <div class="noOfBeans">
+                    <span>0</span>
+                    <div>
+                        <img class="bean"src="./assets/topBean.svg">
+                    </div>
+                </div>
+                <div class="advertisment">
+                    <div class="text">
+                        <span> Stand a chance to win x5 bonus of Beans on 5th June</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="38" viewBox="0 0 55 38" fill="none">
+                            <path d="M1.23223 17.2322C0.255924 18.2085 0.255924 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM55 16.5L3 16.5V21.5L55 21.5V16.5Z" fill="#333333"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="redeemSection">
+                    <div class="workshops slideOption">
+                        <div class="title">
+                            Attend a workshop
+                        </div>
+                        <div class="slideshow-container">
+                            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                            <div class="slides">
+                                <div class="slide">
+                                    <div class="content">
+                                        <img src="./assets/ferticlay.png" alt="Slide 2">
+                                        <div class="textContent">
+                                            <span class="cost">1000</span>
+                                            <spanc class="avalability">Avaliable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="content">
+                                        <img src="./assets/smoodee.png" alt="Slide 2">
+                                        <div class="textContent">
+                                            <span class="cost">1200</span>
+                                            <spanc class="avalability un">Unavaliable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="content">
+                                        <img src="./assets/Ecoponics.png" alt="Slide 2">
+                                        <div class="textContent">
+                                            <span class="cost">3000</span>
+                                            <spanc class="avalability">Avaliable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="content">
+                                        <img src="./assets/smoodee.png" alt="Slide 2">
+                                        <div class="textContent">
+                                            <span class="cost">1200</span>
+                                            <spanc class="avalability un">Unavaliable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="redeemSection">
+                    <div class="workshops slideOption">
+                        <div class="title">
+                            Claim Your Voucher
+                        </div>
+                        <div class="slideshow-container">
+                            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                            <div class="slides">
+                                <div class="slide">
+                                    <div class="content">
+                                        <img src="./assets/ferticlay.png" alt="Slide 2">
+                                        <div class="textContent">
+                                            <span class="cost">2000</span>
+                                            <spanc class="avalability">Avaliable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="content">
+                                        <img src="./assets/smoodee.png" alt="Slide 2">
+                                        <div class="textContent">
+                                            <span class="cost">1200</span>
+                                            <spanc class="avalability un">Unavaliable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="content">
+                                        <img src="./assets/Ecoponics.png" alt="Slide 2">
+                                        <div class="textContent">
+                                            <span class="cost">3000</span>
+                                            <spanc class="avalability">Avaliable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="content">
+                                        <img src="./assets/smoodee.png" alt="Slide 2">
+                                        <div class="textContent">
+                                            <span class="cost">1200</span>
+                                            <spanc class="avalability un">Unavaliable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- Control Pannel Pages -->
         <div class="mainContent hidden" id="Map">
             <div class="closestLocation">
 
@@ -155,6 +281,7 @@
 
     <script src="mobileView.js"></script>
     <script src="loadingUserData.js"></script>
+    <script src="slideShow.js"></script>
     <script src="map.js"></script>
 
 </body>
