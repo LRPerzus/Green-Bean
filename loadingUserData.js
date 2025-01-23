@@ -87,7 +87,7 @@ function addClickListenerToPointerElements(containerElement,isControlBar) {
         if(isControlBar)
         {
             const currentActivePannel = controlBar.querySelector(".active");
-            currentActivePannel.classList.remove("active");if (currentActivePannel) {
+            if (currentActivePannel) {
                 currentActivePannel.classList.remove("active");
             }
     
@@ -221,6 +221,14 @@ seeSettingsElement.addEventListener("click",() => {
     settings.classList.remove("hidden");
 })
 
+// Click Function for Calander
+const seeCalanderElement = controlPannel.querySelector("#seeCalander");
+seeCalanderElement.addEventListener("click",() => {
+    homePageElement.classList.add("hidden");
+
+    const calander = document.getElementById("Calander");
+    calander.classList.remove("hidden");
+})
   
 
 
