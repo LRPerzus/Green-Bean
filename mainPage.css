@@ -928,6 +928,11 @@ body {
         height: 100px;
         vertical-align: top;
     }
+
+    [data-day]
+    {
+        cursor: pointer;
+    }
 }
 
 #CalanderMoreDetails
