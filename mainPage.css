@@ -127,6 +127,7 @@ body {
     align-items: center;
     align-content: center;
     padding-bottom: 110px;
+    overflow-y: scroll;
 }
 
 .rankingInfo
@@ -266,8 +267,8 @@ body {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding-left: 30px;
             border-left: 1px solid black;
+
             cursor: pointer;
         }
         
@@ -276,6 +277,8 @@ body {
             width: 100px;
             font-size: 20px;
             text-decoration: underline;
+            padding: 10px;
+
         }
 
         img
