@@ -163,6 +163,8 @@ upComingEventsElement.addEventListener("click",() => {
     const seeEvents = document.getElementById("seeEvents");
     seeEvents.classList.remove("hidden");
 })
+
+
   
 
 

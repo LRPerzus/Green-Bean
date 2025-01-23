@@ -1,9 +1,9 @@
 let currentIndex = 0;
 
-function moveSlide(direction) {
-    const slides = document.querySelector(".slides");
-    const slideWidth = document.querySelector(".slide").offsetWidth; // Get single slide width
-    const totalSlides = document.querySelectorAll(".slide").length;
+function moveSlide(direction,type) {
+    const slides = document.querySelector(`#${type} .slides`);
+    const slideWidth = document.querySelector(`#${type} .slide`).offsetWidth; // Get single slide width
+    const totalSlides = document.querySelectorAll(`#${type} .slide`).length;
     const visibleSlides = Math.floor(100 / 35); // Number of slides visible at a time
 
     currentIndex += direction;
