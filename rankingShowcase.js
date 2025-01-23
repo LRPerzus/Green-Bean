@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+// Click function for see local rankings
+const seemoreRanking = homePageElement.querySelector(".rankingMore .container");
+seemoreRanking.addEventListener("click",() => {
+    const seeLocalRankings = document.getElementById("")
     const rankingList = document.querySelector("#rankList");
     const rankingListContainer = document.querySelector(".list-container");
 
@@ -30,4 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     adjustRankingList();
     window.addEventListener("resize", adjustRankingList); // Adjust when the window resizes
-});
+})
+

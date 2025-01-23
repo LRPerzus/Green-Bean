@@ -154,6 +154,15 @@ seemoreRankingElement.addEventListener("click",() => {
     const rankings = document.getElementById("rankings");
     rankings.classList.remove("hidden");
 })
+
+
+const upComingEventsElement = document.getElementById("upcomingEvents");
+upComingEventsElement.addEventListener("click",() => {
+    homePageElement.classList.add("hidden");
+
+    const seeEvents = document.getElementById("seeEvents");
+    seeEvents.classList.remove("hidden");
+})
   
 
 
