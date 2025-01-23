@@ -15,7 +15,7 @@ function convertTimeToMinutes(time) {
 }
 
 function generateRandomMonth() {
-    const daysInMonth = 5; // Number of days with events
+    const daysInMonth = 3; // Number of days with events
     const maxEventsPerDay = 3; // Max 3 events per day
     const maxTotalEvents = 10; // Max 10 events in total
     const randomMonth = {};
