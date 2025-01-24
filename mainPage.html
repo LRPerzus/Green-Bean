@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobileOverlay.css">
     <link rel="stylesheet" href="mainPage.css">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
 
     <script>
         // Function to get query parameters from the URL
@@ -91,7 +93,7 @@
         </div>
         
         <!-- This is starting for HOMEPAGE -->
-        <div class="mainContent" id="Homepage">
+        <div class="mainContent hidden" id="Homepage">
             <div id="Rankings" class="brownContainer">
                 <div class="row rankingInfo">
                     <div class="contributors">
@@ -352,23 +354,26 @@
             </div>
         </div>
 
-        <div class="mainContent still-devleopment hidden" id="Scanner">
-            <div>
-                <span> SORRY THIS Feature IS not Implemented Yet </span>
-                <span> o(TヘTo)	</span>
+        <div class="mainContent" id="Scanner">
+            <div class="scanner-container" id="scanningStart">
+                <img id="scannerBorder" src="./assets/scannerFrame.png"> 
+                <img id="scannerImage" src="./assets/scanme.png">
+            </div>
+            <div class="qrCodeScanned hidden">
+
             </div>
         </div>
 
         <div class="mainContent still-devleopment hidden" id="Friends">
             <div>
-                <span> SORRY THIS Feature IS not Implemented Yet </span>
+                <span> Undermatainance </span>
                 <span> o(TヘTo)	</span>
             </div>
         </div>
 
         <div class="mainContent still-devleopment hidden" id="Settings">
             <div>
-                <span> SORRY THIS Feature IS not Implemented Yet </span>
+                <span> Undermatainance </span>
                 <span> o(TヘTo)	</span>
             </div>
         </div>
@@ -410,6 +415,7 @@
     <script src="rankingShowcase.js"></script>
     <script src="seeEventsList.js"></script>
     <script src="calanderActivities.js"></script>
+    <script src="qrCodeScanner.js"></script>
 
 </body>
 </html>
