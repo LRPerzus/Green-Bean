@@ -1,4 +1,4 @@
-document.getElementById("scanningStart").addEventListener("click", async function () {
+document.getElementById("scannerImage").addEventListener("click", async function () {
     const qrCodeScanned = document.querySelector(".qrCodeScanned");
     const scannerContainer = document.getElementById("scanningStart");
     
