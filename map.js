@@ -71,3 +71,8 @@ function initMap() {
         }
     }
 }
+
+const seeMapElement = document.getElementById("seeMap");
+seeMapElement.addEventListener("click",() => {
+    mapClick();
+})
