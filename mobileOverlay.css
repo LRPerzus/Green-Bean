@@ -12,9 +12,14 @@
     font-size: 24px;
     z-index: 9999;
     padding-top: 20%;
+
+    span{
+        margin-bottom: 10px;
+    }
 }
 
 /* Show overlay when screen is not mobile */
 .overlay.show {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
