@@ -200,6 +200,10 @@ scannerElement.addEventListener("click",() => {
 
     const scanner = document.getElementById("Scanner");
     scanner.classList.remove("hidden");
+
+    const qrCodeScannedElement = scanner.querySelector(".qrCodeScanned");
+    qrCodeScannedElement.textContent = "";
+    qrCodeScannedElement.classList.add("hidden");
 })
 
 
